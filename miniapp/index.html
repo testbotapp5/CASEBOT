@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>KINO // Terminal</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="brand-dot"></span>KINO<span style="color:var(--text-tertiary);font-weight:500;">.TERMINAL</span></div>
+  <div class="status-pill" id="movieCountPill">— FILM</div>
+</div>
+
+<div class="search-zone">
+  <div class="search-box">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="searchInput" type="text" placeholder="Kino nomi yoki kodini qidiring..." autocomplete="off">
+    <button class="search-clear" id="searchClear">✕</button>
+  </div>
+  <div class="search-results-count" id="searchResultsCount" style="display:none;"></div>
+</div>
+
+<div id="mainContent"></div>
+
+<div class="bottom-nav">
+  <div class="nav-item active" data-tab="home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    <span>ASOSIY</span>
+  </div>
+  <div class="nav-item" data-tab="new">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+    <span>YANGI</span>
+  </div>
+  <div class="nav-item" data-tab="popular">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>
+    <span>TOP</span>
+  </div>
+</div>
+
+<div class="detail-overlay" id="detailOverlay"></div>
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

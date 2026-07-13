@@ -1,0 +1,27 @@
+{
+  "name": "kino-bot",
+  "version": "2.0.0",
+  "description": "Production-ready Telegram Movie Bot with Mini App support",
+  "main": "index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:restart": "pm2 restart kino-bot",
+    "pm2:stop": "pm2 stop kino-bot",
+    "pm2:logs": "pm2 logs kino-bot"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3",
+    "dotenv": "^16.4.5",
+    "archiver": "^7.0.1",
+    "adm-zip": "^0.5.16"
+  },
+  "keywords": ["telegram", "bot", "movie", "telegraf"],
+  "license": "UNLICENSED",
+  "private": true
+}

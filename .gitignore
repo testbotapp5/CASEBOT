@@ -1,0 +1,9 @@
+node_modules/
+.env
+data/
+logs/
+*.log
+backup_*.zip
+backup_*.json
+.DS_Store
+*.tmp
